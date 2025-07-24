@@ -1,0 +1,232 @@
+/**************************************************/
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**************************************************/
+/* Global */
+
+:root {
+  --color-background: #f0f0f0;
+  --color-disabled: #ddd;
+  --color-error: #c62828;
+  --color-error-hover: #a91d1d;
+  --color-on-primary: #fff;
+  --color-primary-hover: #0056b3;
+  --color-primary: #007bff;
+  --color-surface: #fff;
+  --color-text: #333;
+
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1280px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 10rem 0;
+}
+
+/**************************************************/
+/* Layout */
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.users,
+.loading {
+  display: grid;
+  grid-gap: 2rem;
+  width: 30rem;
+}
+
+/**************************************************/
+/* Media queries */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--breakpoint-sm);
+  }
+
+  .users,
+  .loading {
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(var(--breakpoint-sm) - 4rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--breakpoint-md);
+  }
+
+  .users,
+  .loading {
+    grid-template-columns: repeat(3, 1fr);
+    width: calc(var(--breakpoint-md) - 4rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--breakpoint-lg);
+  }
+
+  .users,
+  .loading {
+    grid-template-columns: repeat(4, 1fr);
+    width: calc(var(--breakpoint-lg) - 4rem);
+  }
+}
+
+/**************************************************/
+/* Header */
+
+header {
+  background-color: var(--color-surface);
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: 0;
+  z-index: 1;
+}
+
+/**************************************************/
+/* Card + Skeleton */
+
+.card,
+.skeleton {
+  background-color: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform ease 0.2s;
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  border-radius: 50%;
+  height: 10rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  width: 10rem;
+}
+
+.card h2,
+.card p {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.card button {
+  margin-top: 2rem;
+}
+
+/**************************************************/
+/* Skeleton loading animation */
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton__avatar,
+.skeleton__line {
+  animation: skeleton 1.2s infinite;
+  background-image: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+}
+
+.skeleton__avatar {
+  border-radius: 50%;
+  height: 10rem;
+  margin: 0 auto 2rem;
+  width: 10rem;
+}
+
+.skeleton__line {
+  border-radius: 0.4rem;
+  height: 1.6rem;
+  margin: 0 auto 1rem;
+  width: 100%;
+}
+
+.skeleton__line--name {
+  width: 60%;
+}
+
+.skeleton__line--email {
+  width: 80%;
+}
+
+.skeleton__line--button {
+  height: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 40%;
+}
+
+/**************************************************/
+/* Button */
+
+button {
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--color-on-primary);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transition: background-color ease 0.2s;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+button:disabled {
+  background-color: var(--color-disabled);
+  cursor: default;
+}
+
+button.button--error {
+  background-color: var(--color-error);
+}
+
+button.button--error:hover {
+  background-color: var(--color-error-hover);
+}

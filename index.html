@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>User Profile Card</title>
+    </head>
+    <body>
+      <link rel="stylesheet" href="styles.css" />
+
+      <header>
+        <div class="container">
+          <button id="button__load-new-users" onclick="getUsers()">
+            Load new users
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="users" id="users"></div>
+          <div class="loading" id="loading"></div>
+          <div id="error"></div>
+        </div>
+      </main>
+
+      <script src="script.js"></script>
+    </body>
+  </html>
+</html>
