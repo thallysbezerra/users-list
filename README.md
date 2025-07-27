@@ -24,22 +24,22 @@ A modern web application that displays user profiles with a clean, responsive in
 
 ```
 users-list/
-├── index.html            # Main HTML file (root)
-├── styles/              # CSS styles
-│   └── styles.css       # Main stylesheet
-├── src/                 # TypeScript source files
-│   ├── main.ts         # Application entry point
-│   ├── api.ts          # API functions
-│   ├── components.ts   # UI components
-│   ├── constants.ts    # Application constants
-│   ├── error-handler.ts # Error handling
-│   ├── types.ts        # Type definitions
-│   ├── ui-helpers.ts   # UI utility functions
-│   ├── ui-renders.ts   # UI rendering functions
-│   └── utils.ts        # Utility functions
-├── dist/               # Build output (auto-generated)
-├── node_modules/       # Dependencies (gitignored)
-└── package.json        # Project configuration
+├── index.html             # Main HTML file (root)
+├── styles/                # CSS styles
+│   └── styles.css         # Main stylesheet
+├── src/                   # TypeScript source files
+│   ├── main.ts            # Application entry point
+│   ├── api.ts             # API functions
+│   ├── components.ts      # UI components
+│   ├── constants.ts       # Application constants
+│   ├── error-handler.ts   # Error handling
+│   ├── types.ts           # Type definitions
+│   ├── ui-helpers.ts      # UI utility functions
+│   ├── ui-renders.ts      # UI rendering functions
+│   └── utils.ts           # Utility functions
+├── dist/                  # Build output (auto-generated)
+├── node_modules/          # Dependencies (gitignored)
+└── package.json           # Project configuration
 ```
 
 ## 🚀 Getting Started
@@ -185,6 +185,15 @@ To deploy this application:
 3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## ✅ TODO List
+
+- [ ] Add unit tests using Jest
+- [ ] Implement end-to-end tests with Cypress
+- [ ] Set up styling with Tailwind CSS
+- [ ] Implement search functionality
+- [ ] Add input field to specify the number of users to load
+- [ ] Implement CI/CD pipeline
 
 ## 📝 License
 
