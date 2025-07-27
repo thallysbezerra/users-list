@@ -1,9 +1,9 @@
+// ##################################################
+// UI Renders
+
 import { User, UserResponse, UIReferences } from './types.js';
 import { hide, show, append, setHTML, addClass, enabled, disabled } from './ui-helpers.js';
 import { useCardTemplate, skeletonCard } from './components.js';
-
-// ##################################################
-// UI Renders
 
 export function resetUI({ usersEl, errorEl }: Pick<UIReferences, 'usersEl' | 'errorEl'>) {
     if (usersEl) {

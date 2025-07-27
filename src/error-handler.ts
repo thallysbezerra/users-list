@@ -1,8 +1,8 @@
-import { UIReferences } from './types.js';
-import { hide, show, enabled } from './ui-helpers.js';
-
 // ##################################################
 // Error Handler
+
+import { UIReferences } from './types.js';
+import { hide, show, enabled } from './ui-helpers.js';
 
 export function handleError(error: Error, { errorEl, loadingEl, buttonLoadNewUsersEl }: UIReferences) {
     if (loadingEl) hide(loadingEl);

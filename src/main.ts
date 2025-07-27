@@ -1,3 +1,6 @@
+// ##################################################
+// Main Application
+
 import { UIReferences } from './types.js';
 import { USERS_QUANTITY } from './constants.js';
 import { fetchUsers } from './api.js';
@@ -34,5 +37,4 @@ async function getUsers(): Promise<void> {
 
 // ##################################################
 // Make getUsers available globally for the onclick handler
-
 window.getUsers = getUsers;
